@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You're On The Waitlist | Low-Ticket Launchpad LIVE</title>
+  <meta name="description" content="You're on the waitlist for Low-Ticket Launchpad LIVE. We'll be in touch when enrollment opens." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark:       #000000;
+      --dark-card:  #161616;
+      --dark-line:  rgba(255, 255, 255, 0.08);
+      --blue:       #87B8F8;
+      --blue-dark:  #5F85B6;
+      --yellow:     #F9E35D;
+      --cream:      #F7F5ED;
+      --green:      #22c55e;
+      --muted:      rgba(247, 245, 237, 0.55);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    ::selection { background: var(--yellow); color: #000; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--dark);
+      color: var(--cream);
+      min-height: 100vh;
+      padding: 48px 20px 80px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      animation: fadeUp 0.6s ease-out;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─── Top Pill ─── */
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--dark-card);
+      border: 1px solid #2a2a2a;
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream);
+      margin-bottom: 28px;
+    }
+
+    .pill-dot {
+      width: 8px; height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    /* ─── Headline ─── */
+    h1 {
+      font-family: 'Fjalla One', sans-serif;
+      font-size: clamp(48px, 9vw, 76px);
+      line-height: 0.92;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 .accent {
+      color: var(--yellow);
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+
+    .meantime {
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--cream);
+      margin-bottom: 28px;
+    }
+
+    .meantime strong {
+      color: var(--yellow);
+      font-weight: 700;
+    }
+
+    /* ─── Cards ─── */
+    .card {
+      background: var(--dark-card);
+      border: 1px solid var(--dark-line);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+    }
+
+    .card-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-family: 'Fjalla One', sans-serif;
+      font-size: 22px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      letter-spacing: 0.01em;
+    }
+
+    .card p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: rgba(247, 245, 237, 0.7);
+    }
+
+    .card p + p { margin-top: 12px; }
+
+    /* ─── CTA Card (highlighted) ─── */
+    .cta-card {
+      background: linear-gradient(135deg, rgba(135, 184, 248, 0.08), rgba(95, 133, 182, 0.04));
+      border: 1px solid rgba(135, 184, 248, 0.25);
+    }
+
+    .cta-card .card-eyebrow { color: var(--yellow); }
+
+    .cta-time {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--yellow);
+      margin-top: 14px;
+    }
+
+    /* ─── Signature ─── */
+    .signature {
+      margin-top: 8px;
+      margin-bottom: 32px;
+      padding: 0 8px;
+    }
+
+    .signature p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .signature .names {
+      color: var(--yellow);
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    /* ─── Launch Date Card ─── */
+    .launch-card {
+      text-align: center;
+    }
+
+    .launch-card .label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+
+    .launch-date {
+      font-family: 'Fjalla One', sans-serif;
+      font-size: clamp(36px, 6vw, 48px);
+      color: var(--yellow);
+      letter-spacing: 0.01em;
+      margin-bottom: 18px;
+    }
+
+    /* ─── Activity Feed ─── */
+    .activity-feed {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--dark-line);
+      text-align: left;
+      height: 24px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .activity-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      animation: shuffle 18s infinite;
+    }
+
+    .activity-list li {
+      height: 24px;
+      font-size: 13px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .activity-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--green);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    @keyframes shuffle {
+      0%,   14% { transform: translateY(0); }
+      16%,  30% { transform: translateY(-24px); }
+      32%,  46% { transform: translateY(-48px); }
+      48%,  62% { transform: translateY(-72px); }
+      64%,  78% { transform: translateY(-96px); }
+      80%,  94% { transform: translateY(-120px); }
+      96%, 100% { transform: translateY(0); }
+    }
+
+    /* ─── Survey Embed ─── */
+    .survey-section {
+      margin-top: 32px;
+    }
+
+    .survey-section h3 {
+      font-family: 'Fjalla One', sans-serif;
+      font-size: 22px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .survey-section .survey-sub {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .survey-embed {
+      background: var(--dark-card);
+      border: 1px solid var(--dark-line);
+      border-radius: 16px;
+      height: 560px;
+      overflow: hidden;
+    }
+
+    .survey-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 12px;
+      color: rgba(247, 245, 237, 0.3);
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 32px 16px 64px; }
+      .card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Headline -->
+    <h1>You're <span class="accent">In!</span></h1>
+    <p class="subtitle">We'll be in touch soon.</p>
+
+    <!-- In the meantime copy -->
+    <p class="meantime">In the meantime, we'd love to give you a <strong>FREE sneak peek</strong> of the course (just so you can get a better sense of what to expect!).</p>
+
+    <!-- Typeform survey -->
+    <div class="survey-section">
+      <div class="survey-embed">
+        <iframe id="typeform-embed" title="Sneak Peek Form" allow="camera; microphone; autoplay; encrypted-media;"></iframe>
+      </div>
+    </div>
+
+    <footer>&copy; 2026 Low-Ticket Launchpad. All rights reserved.</footer>
+  </div>
+
+  <script>
+    // Pass email from URL param to Typeform
+    var params = new URLSearchParams(window.location.search);
+    var email = params.get('email') || '';
+    // Replace with your actual Typeform ID when ready
+    var typeformId = 'cmqsb3aS';
+    var src = 'https://form.typeform.com/to/' + typeformId;
+    if (email) src += '#email=' + encodeURIComponent(email);
+    document.getElementById('typeform-embed').src = src;
+  </script>
+</body>
+</html>
