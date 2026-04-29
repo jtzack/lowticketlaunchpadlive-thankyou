@@ -7,28 +7,28 @@
   <meta name="description" content="You're on the waitlist for Low-Ticket Launchpad LIVE. We'll be in touch when enrollment opens." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --dark:       #000000;
-      --dark-card:  #161616;
-      --dark-line:  rgba(255, 255, 255, 0.08);
-      --blue:       #87B8F8;
-      --blue-dark:  #5F85B6;
-      --yellow:     #F9E35D;
-      --cream:      #F7F5ED;
-      --green:      #22c55e;
-      --muted:      rgba(247, 245, 237, 0.55);
+      --tar:        #16120E;
+      --espresso:   #3A322A;
+      --line:       rgba(240, 228, 208, 0.08);
+      --peach:      #FFB86C;
+      --orange:     #E8682A;
+      --linen:      #F0E4D0;
+      --taupe:      #B4A690;
+      --muted:      rgba(240, 228, 208, 0.6);
     }
 
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    ::selection { background: var(--yellow); color: #000; }
+    ::selection { background: var(--orange); color: var(--linen); }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: var(--dark);
-      color: var(--cream);
+      font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 300;
+      background-color: var(--tar);
+      color: var(--linen);
       min-height: 100vh;
       padding: 48px 20px 80px;
       -webkit-font-smoothing: antialiased;
@@ -51,21 +51,21 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--dark-card);
-      border: 1px solid #2a2a2a;
+      background: var(--espresso);
+      border: 1px solid var(--line);
       border-radius: 100px;
       padding: 6px 16px;
       font-size: 12px;
-      font-weight: 600;
+      font-weight: 500;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--cream);
+      color: var(--linen);
       margin-bottom: 28px;
     }
 
     .pill-dot {
       width: 8px; height: 8px;
-      background: var(--green);
+      background: var(--peach);
       border-radius: 50%;
       animation: pulse 2s ease-in-out infinite;
     }
@@ -77,10 +77,11 @@
 
     /* ─── Headline ─── */
     h1 {
-      font-family: 'Fjalla One', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 300;
       font-size: clamp(20px, 4.4vw, 34px);
-      line-height: 1.05;
-      letter-spacing: -0.01em;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
       text-transform: uppercase;
       text-align: center;
       margin-bottom: 12px;
@@ -88,7 +89,7 @@
     }
 
     h1 .accent {
-      color: var(--yellow);
+      color: var(--orange);
     }
 
     .subtitle {
@@ -101,20 +102,21 @@
     .meantime {
       font-size: 17px;
       line-height: 1.6;
-      color: var(--cream);
+      color: var(--linen);
       margin-bottom: 28px;
       text-align: center;
+      font-weight: 300;
     }
 
     .meantime strong {
-      color: var(--yellow);
-      font-weight: 700;
+      color: var(--orange);
+      font-weight: 600;
     }
 
     /* ─── Cards ─── */
     .card {
-      background: var(--dark-card);
-      border: 1px solid var(--dark-line);
+      background: var(--espresso);
+      border: 1px solid var(--line);
       border-radius: 16px;
       padding: 28px 32px;
       margin-bottom: 20px;
@@ -122,44 +124,46 @@
 
     .card-eyebrow {
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--blue);
+      color: var(--peach);
       margin-bottom: 10px;
     }
 
     .card h3 {
-      font-family: 'Fjalla One', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 300;
       font-size: 22px;
       text-transform: uppercase;
       margin-bottom: 12px;
-      letter-spacing: 0.01em;
+      letter-spacing: -0.01em;
     }
 
     .card p {
       font-size: 15px;
       line-height: 1.6;
-      color: rgba(247, 245, 237, 0.7);
+      color: rgba(240, 228, 208, 0.75);
+      font-weight: 300;
     }
 
     .card p + p { margin-top: 12px; }
 
     /* ─── CTA Card (highlighted) ─── */
     .cta-card {
-      background: linear-gradient(135deg, rgba(135, 184, 248, 0.08), rgba(95, 133, 182, 0.04));
-      border: 1px solid rgba(135, 184, 248, 0.25);
+      background: linear-gradient(135deg, rgba(232, 104, 42, 0.10), rgba(255, 184, 108, 0.04));
+      border: 1px solid rgba(232, 104, 42, 0.30);
     }
 
-    .cta-card .card-eyebrow { color: var(--yellow); }
+    .cta-card .card-eyebrow { color: var(--orange); }
 
     .cta-time {
       display: inline-flex;
       align-items: center;
       gap: 6px;
       font-size: 12px;
-      font-weight: 600;
-      color: var(--yellow);
+      font-weight: 500;
+      color: var(--orange);
       margin-top: 14px;
     }
 
@@ -177,8 +181,8 @@
     }
 
     .signature .names {
-      color: var(--yellow);
-      font-weight: 600;
+      color: var(--orange);
+      font-weight: 500;
       margin-top: 4px;
     }
 
@@ -189,18 +193,19 @@
 
     .launch-card .label {
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--blue);
+      color: var(--peach);
       margin-bottom: 8px;
     }
 
     .launch-date {
-      font-family: 'Fjalla One', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 300;
       font-size: clamp(36px, 6vw, 48px);
-      color: var(--yellow);
-      letter-spacing: 0.01em;
+      color: var(--orange);
+      letter-spacing: -0.01em;
       margin-bottom: 18px;
     }
 
@@ -208,7 +213,7 @@
     .activity-feed {
       margin-top: 18px;
       padding-top: 18px;
-      border-top: 1px solid var(--dark-line);
+      border-top: 1px solid var(--line);
       text-align: left;
       height: 24px;
       overflow: hidden;
@@ -235,7 +240,7 @@
       content: '';
       width: 6px;
       height: 6px;
-      background: var(--green);
+      background: var(--peach);
       border-radius: 50%;
       flex-shrink: 0;
     }
@@ -256,7 +261,8 @@
     }
 
     .survey-section h3 {
-      font-family: 'Fjalla One', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 300;
       font-size: 22px;
       text-transform: uppercase;
       margin-bottom: 8px;
@@ -269,8 +275,8 @@
     }
 
     .survey-embed {
-      background: var(--dark-card);
-      border: 1px solid var(--dark-line);
+      background: var(--espresso);
+      border: 1px solid var(--line);
       border-radius: 16px;
       height: 560px;
       overflow: hidden;
@@ -287,7 +293,7 @@
       margin-top: 40px;
       text-align: center;
       font-size: 12px;
-      color: rgba(247, 245, 237, 0.3);
+      color: rgba(240, 228, 208, 0.35);
     }
 
     @media (max-width: 640px) {
@@ -304,7 +310,7 @@
 
     <!-- In the meantime copy -->
     <p class="meantime">Want a <strong>sneak peek</strong> of the program?</p>
-    <p class="meantime">Answer <strong>3 quick questions</strong> and we'll give you free access to our product idea generation module!</p>
+    <p class="meantime">Answer <strong>3 quick questions</strong> and we'll give you free access to one of our Claude Skills!</p>
 
     <!-- Typeform survey -->
     <div class="survey-section">
@@ -321,7 +327,7 @@
     var params = new URLSearchParams(window.location.search);
     var email = params.get('email') || '';
     // Replace with your actual Typeform ID when ready
-    var typeformId = 'cmqsb3aS';
+    var typeformId = 'e2OLUI6U';
     var src = 'https://form.typeform.com/to/' + typeformId;
     if (email) src += '#email=' + encodeURIComponent(email);
     document.getElementById('typeform-embed').src = src;
